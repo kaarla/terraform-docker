@@ -1,5 +1,9 @@
 FROM golang:1.17-alpine3.14
 
+RUN apk add git
+RUN apk add gcc
+RUN apk add musl-dev
+
 RUN wget https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
     unzip terraform_0.15.0_linux_amd64.zip && \
     mv terraform /usr/local/bin/
