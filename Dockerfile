@@ -16,3 +16,6 @@ RUN wget -qO- https://github.com/terraform-linters/tflint/releases/download/v0.4
 RUN wget -qO- https://github.com/gruntwork-io/terratest/releases/download/v0.41.6/terratest_log_parser_linux_amd64 -O terratest_log_parser && \
     chmod +x terratest_log_parser && \
     mv terratest_log_parser /usr/local/bin
+   
+
+LABEL com.circleci.preserve-entrypoint=true
