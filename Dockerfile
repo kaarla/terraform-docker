@@ -3,8 +3,8 @@ FROM golang:1.17-alpine3.14
 RUN apk add gcc
 RUN apk add musl-dev
 
-RUN wget https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip && \
-    unzip terraform_0.15.0_linux_amd64.zip && \
+RUN wget https://releases.hashicorp.com/terraform/1.3.6/terraform_1.3.6_linux_amd64.zip && \
+    unzip terraform_1.3.6_linux_amd64.zip && \
     mv terraform /usr/local/bin/
 
 RUN wget -qO- https://github.com/terraform-linters/tflint/releases/download/v0.20.3/tflint_linux_amd64.zip -O tflint.zip && \
