@@ -1,6 +1,5 @@
 FROM golang:1.17-alpine3.14
 
-RUN apk add git
 RUN apk add gcc
 RUN apk add musl-dev
 
@@ -16,6 +15,3 @@ RUN wget -qO- https://github.com/terraform-linters/tflint/releases/download/v0.2
 RUN wget -qO- https://github.com/gruntwork-io/terratest/releases/download/v0.30.12/terratest_log_parser_linux_amd64 -O terratest_log_parser && \
     chmod +x terratest_log_parser && \
     mv terratest_log_parser /usr/local/bin
-
-
-LABEL com.circleci.preserve-entrypoint=true
